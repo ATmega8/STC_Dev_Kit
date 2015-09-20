@@ -1,0 +1,262 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:stcmcu
+LIBS:cp2102
+LIBS:usb_conn
+LIBS:RTC
+LIBS:STC_Dev_Kit-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CP2102 U201
+U 1 1 55DC6EFE
+P 5740 3420
+F 0 "U201" H 5740 3420 60  0000 C CNN
+F 1 "CP2102" H 5740 3520 60  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-28-1EP_5x5mm_Pitch0.5mm" H 5740 3420 60  0001 C CNN
+F 3 "" H 5740 3420 60  0000 C CNN
+	1    5740 3420
+	1    0    0    -1  
+$EndComp
+Text HLabel 3890 3420 0    60   BiDi ~ 0
+USB_D-
+Text HLabel 3890 3520 0    60   BiDi ~ 0
+USB_D+
+Text HLabel 3890 3620 0    60   Input ~ 0
+VBUS
+Text HLabel 3890 3320 0    60   Input ~ 0
+GND
+Text Label 4220 3320 0    60   ~ 0
+GND
+$Comp
+L CP C201
+U 1 1 55DC7EB6
+P 4650 3870
+F 0 "C201" H 4700 3970 40  0000 L CNN
+F 1 "4.7u" H 4700 3770 40  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeA_EIA-3216_Reflow" H 4750 3720 30  0001 C CNN
+F 3 "" H 4650 3870 300 0000 C CNN
+	1    4650 3870
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3890 3420 4940 3420
+Wire Wire Line
+	3890 3520 4940 3520
+Wire Wire Line
+	3890 3620 4940 3620
+Wire Wire Line
+	4490 4310 5540 4310
+Wire Wire Line
+	5440 4310 5440 4220
+Wire Wire Line
+	3890 3320 4940 3320
+Wire Wire Line
+	4650 4150 4650 4070
+Wire Wire Line
+	4650 3620 4650 3670
+Wire Wire Line
+	4940 3720 4850 3720
+Wire Wire Line
+	4850 3720 4850 4310
+Wire Wire Line
+	5540 4310 5540 4220
+Connection ~ 5440 4310
+Text Label 4650 4150 0    60   ~ 0
+GND
+Wire Wire Line
+	5240 2570 5240 2470
+Wire Wire Line
+	5240 2470 4800 2470
+Wire Wire Line
+	4800 2470 4800 3320
+Connection ~ 4800 3320
+Text HLabel 6260 1810 2    60   Output ~ 0
+TXD
+Text HLabel 6260 1960 2    60   Input ~ 0
+RXD
+Wire Wire Line
+	5640 1810 6260 1810
+Wire Wire Line
+	5640 1810 5640 2570
+Wire Wire Line
+	5740 2570 5740 1960
+Wire Wire Line
+	5740 1960 6260 1960
+$Comp
+L LED D201
+U 1 1 55DC9358
+P 5150 4620
+F 0 "D201" H 5370 4690 50  0000 C CNN
+F 1 "LED_PWR" H 5150 4500 50  0000 C CNN
+F 2 "LEDs:LED-0805" H 5150 4620 60  0001 C CNN
+F 3 "" H 5150 4620 60  0000 C CNN
+	1    5150 4620
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D202
+U 1 1 55DC95E1
+P 5150 4880
+F 0 "D202" H 5380 4930 50  0000 C CNN
+F 1 "LED_STATUS" H 5150 4750 50  0000 C CNN
+F 2 "LEDs:LED-0805" H 5150 4880 60  0001 C CNN
+F 3 "" H 5150 4880 60  0000 C CNN
+	1    5150 4880
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R201
+U 1 1 55DC963D
+P 4480 4620
+F 0 "R201" V 4560 4620 40  0000 C CNN
+F 1 "4.7k" V 4487 4621 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4410 4620 30  0001 C CNN
+F 3 "" H 4480 4620 30  0000 C CNN
+	1    4480 4620
+	0    1    1    0   
+$EndComp
+$Comp
+L R R202
+U 1 1 55DC96B4
+P 4480 4880
+F 0 "R202" V 4560 4880 40  0000 C CNN
+F 1 "4.7k" V 4487 4881 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4410 4880 30  0001 C CNN
+F 3 "" H 4480 4880 30  0000 C CNN
+	1    4480 4880
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4730 4880 4950 4880
+Wire Wire Line
+	4950 4620 4730 4620
+Wire Wire Line
+	3810 4880 4230 4880
+Wire Wire Line
+	5350 4620 5660 4620
+Wire Wire Line
+	5660 4620 5660 4970
+Wire Wire Line
+	5350 4880 5660 4880
+Connection ~ 5660 4880
+Text Label 5660 4970 0    60   ~ 0
+GND
+Wire Wire Line
+	4230 4620 3980 4620
+Wire Wire Line
+	3980 4620 3980 3620
+Text Label 4250 3620 0    60   ~ 0
+VBUS
+Connection ~ 3980 3620
+Connection ~ 4850 4310
+Wire Wire Line
+	4490 3620 4490 4310
+Connection ~ 4650 3620
+Connection ~ 4490 3620
+Wire Wire Line
+	5740 4220 5740 4350
+Text Label 5740 4350 0    60   ~ 0
+SUSPEND
+Text Label 3810 4880 0    60   ~ 0
+SUSPEND
+$Comp
+L C C202
+U 1 1 55DCB8DB
+P 8040 3410
+F 0 "C202" H 8040 3510 40  0000 L CNN
+F 1 "0.1u" H 8046 3325 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8078 3260 30  0001 C CNN
+F 3 "" H 8040 3410 60  0000 C CNN
+	1    8040 3410
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C203
+U 1 1 55DCB96D
+P 8380 3420
+F 0 "C203" H 8430 3520 40  0000 L CNN
+F 1 "10u" H 8430 3320 40  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeA_EIA-3216_Reflow" H 8480 3270 30  0001 C CNN
+F 3 "" H 8380 3420 300 0000 C CNN
+	1    8380 3420
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L201
+U 1 1 55DCBABC
+P 9150 2950
+F 0 "L201" H 9150 3050 50  0000 C CNN
+F 1 "INDUCTOR_SMALL" H 9150 2900 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 9150 2950 60  0001 C CNN
+F 3 "" H 9150 2950 60  0000 C CNN
+	1    9150 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7690 3790 9860 3790
+Wire Wire Line
+	8380 3620 8380 3790
+Connection ~ 8380 3790
+Wire Wire Line
+	8040 3610 8040 3790
+Connection ~ 8040 3790
+Wire Wire Line
+	8900 2950 7690 2950
+Wire Wire Line
+	8040 3210 8040 2950
+Connection ~ 8040 2950
+Wire Wire Line
+	8380 3220 8380 2950
+Connection ~ 8380 2950
+Wire Wire Line
+	9400 2950 9860 2950
+Text Label 7690 2950 0    60   ~ 0
+VBUS
+Text Label 7690 3790 0    60   ~ 0
+GND
+Text HLabel 9860 2950 2    60   Output ~ 0
+PWR
+Text HLabel 9860 3790 2    60   Output ~ 0
+DGND
+$EndSCHEMATC

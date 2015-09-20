@@ -1,0 +1,201 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:stcmcu
+LIBS:cp2102
+LIBS:usb_conn
+LIBS:RTC
+LIBS:STC_Dev_Kit-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L USB_CONN X101
+U 1 1 55DC6EDF
+P 1410 3900
+F 0 "X101" H 1610 3600 60  0000 C CNN
+F 1 "USB_CONN" H 1510 4300 60  0000 C CNN
+F 2 "Connect:USB_Micro-B" H 1260 4600 60  0001 C CNN
+F 3 "" H 1260 4600 60  0000 C CNN
+	1    1410 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR01
+U 1 1 55DCF676
+P 4410 3460
+F 0 "#PWR01" H 4410 3550 20  0001 C CNN
+F 1 "+5V" H 4410 3550 30  0000 C CNN
+F 2 "" H 4410 3460 60  0000 C CNN
+F 3 "" H 4410 3460 60  0000 C CNN
+	1    4410 3460
+	1    0    0    -1  
+$EndComp
+$Comp
+L DGND #PWR02
+U 1 1 55DD013C
+P 4410 4350
+F 0 "#PWR02" H 4410 4350 40  0001 C CNN
+F 1 "DGND" H 4410 4280 40  0000 C CNN
+F 2 "" H 4410 4350 60  0000 C CNN
+F 3 "" H 4410 4350 60  0000 C CNN
+	1    4410 4350
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 3250 3580 1000 550 
+U 55DC6DE5
+F0 "USB2USART" 60
+F1 "USB2USART.sch" 60
+F2 "USB_D-" B L 3250 3800 60 
+F3 "USB_D+" B L 3250 3900 60 
+F4 "VBUS" I L 3250 3700 60 
+F5 "GND" I L 3250 4000 60 
+F6 "TXD" O R 4250 3800 60 
+F7 "RXD" I R 4250 3900 60 
+F8 "PWR" O R 4250 3700 60 
+F9 "DGND" O R 4250 4000 60 
+$EndSheet
+$Sheet
+S 5290 3620 1700 420 
+U 55DEB01C
+F0 "STC_CORE" 60
+F1 "STC_CORE.sch" 60
+F2 "PC_TXD" I L 5290 3800 60 
+F3 "PC_RXD" O L 5290 3900 60 
+F4 "LED_DS" O R 6990 3740 60 
+F5 "LED_SCK" O R 6990 3860 60 
+F6 "LED_RCK" O R 6990 3990 60 
+$EndSheet
+$Sheet
+S 7700 3630 1810 410 
+U 55E3457F
+F0 "LED_Display" 60
+F1 "LED_Display.sch" 60
+F2 "DS" I L 7700 3740 60 
+F3 "SCK" I L 7700 3860 60 
+F4 "RCK" I L 7700 3990 60 
+$EndSheet
+$Comp
+L R R101
+U 1 1 55E4B1BA
+P 2800 4000
+F 0 "R101" V 2880 4000 40  0000 C CNN
+F 1 "0" V 2807 4001 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2730 4000 30  0001 C CNN
+F 3 "" H 2800 4000 30  0000 C CNN
+	1    2800 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1810 3700 3250 3700
+Wire Wire Line
+	1810 3800 3250 3800
+Wire Wire Line
+	1810 3900 3250 3900
+Wire Wire Line
+	1810 4000 2550 4000
+Wire Wire Line
+	1810 4100 1950 4100
+Wire Wire Line
+	1950 4100 1950 4000
+Connection ~ 1950 4000
+Wire Wire Line
+	4250 4000 4410 4000
+Wire Wire Line
+	4410 4000 4410 4350
+Wire Wire Line
+	4410 3700 4410 3460
+Wire Wire Line
+	4410 3700 4250 3700
+Wire Notes Line
+	8230 3680 8170 3970
+Wire Notes Line
+	8170 3970 8420 3970
+Wire Notes Line
+	8420 3970 8480 3680
+Wire Notes Line
+	8480 3680 8230 3680
+Wire Notes Line
+	8200 3830 8450 3830
+Wire Notes Line
+	8520 3680 8460 3970
+Wire Notes Line
+	8460 3970 8710 3970
+Wire Notes Line
+	8710 3970 8770 3680
+Wire Notes Line
+	8770 3680 8520 3680
+Wire Notes Line
+	8490 3830 8740 3830
+Wire Notes Line
+	8820 3680 8760 3970
+Wire Notes Line
+	8760 3970 9010 3970
+Wire Notes Line
+	9010 3970 9070 3680
+Wire Notes Line
+	9070 3680 8820 3680
+Wire Notes Line
+	8790 3830 9040 3830
+Wire Notes Line
+	9110 3680 9050 3970
+Wire Notes Line
+	9050 3970 9300 3970
+Wire Notes Line
+	9300 3970 9360 3680
+Wire Notes Line
+	9360 3680 9110 3680
+Wire Notes Line
+	9080 3830 9330 3830
+Wire Wire Line
+	6990 3740 7700 3740
+Wire Wire Line
+	6990 3990 7700 3990
+Wire Wire Line
+	6990 3860 7700 3860
+Wire Wire Line
+	5290 3900 4250 3900
+Wire Wire Line
+	4250 3800 5290 3800
+Wire Wire Line
+	3250 4000 3050 4000
+$EndSCHEMATC
